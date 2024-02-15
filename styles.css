@@ -1,0 +1,221 @@
+/* General styles */
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 20px auto;
+    background-color: #f2f2f2;
+    box-shadow: #0e0a08 2px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 80vh; /* Adjust the maximum height as needed */
+    overflow: auto;
+  }
+  
+  h2 {
+    color: #d31010;
+    text-align: center;
+  }
+  
+  /* Collapsible styles */
+  .collapsible {
+    background-color: #f7f7f7;
+    color: #120b7e;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .collapsible:hover {
+    background-color: #e7e7e7;
+  }
+  
+  .active {
+    background-color: #ddd;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f9f9f9;
+    color: #174646;
+  }
+  .content p{
+    line-height: 2.1;
+  }.flexible-image {
+    max-width: 100%; /* Ensures the image does not exceed the width of its container */
+    height: auto; /* Allows the image to maintain its aspect ratio */
+    display: block; /* Ensures the image behaves as a block element and respects its container's width */
+    margin: 0 auto; /* Centers the image horizontally within its container */
+  }
+  h2, h3, h4 {
+    margin: 0;
+    padding: 10px 0;
+    color: brown;
+  }button.collapsible:hover {
+    background-color: #110707;
+    color: white;
+  }button.collapsible {
+    background-color: rgb(7, 7, 27);
+    color: rgb(66, 53, 53);
+    cursor: pointer;
+    padding: 8px;
+    width: auto;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 1px auto;
+  }  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  /* Add a different background color to every other list item */
+  li:nth-child(even) {
+    background-color: #f9f9f9;
+  }/* Styling for the button */
+#moveToTopBtn {
+  display: none; /* Hide the button initially */
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+/* Styling for the arrow icon */
+#moveToTopBtn span {
+  margin-right: 8px;
+}#moveToTopBtn:hover{
+  background-color: brown;
+}
+
+/* Show the button when it needs to be visible */
+#moveToTopBtn.visible {
+  display: block;
+}
+
+/* Style the heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style table header cells */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Style table data cells */
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.department {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}@media screen and (max-width: 700px) {
+  .department {
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+  }}
+
+.collap-curriculum {
+  background-color: rgb(9, 15, 29);
+  color: rgb(224, 236, 234);
+  cursor: pointer;
+  padding: 10px;
+  width: 18%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10px; /* Spacing between buttons */
+}
+
+.collap-curriculum.active, .collap-curriculum:hover {
+  background-color: rgb(248, 11, 11);
+  color: rgb(255, 255, 255);
+}
+
+.collap-curriculum::after {
+  content: '\002B'; /* Plus sign */
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.collap-curriculum.active::after {
+  content: '\2212'; /* Minus sign */
+}
+
+.contentt {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+  color: rgb(20, 18, 18);
+  line-height: 2.5;
+  width: 58%;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 800px) {
+  .collap-curriculum {
+    width: 52%;
+  }
+}.contentt{width: 90%;
+
+
+}
